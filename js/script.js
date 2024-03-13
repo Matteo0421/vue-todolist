@@ -25,6 +25,8 @@ createApp({
           done:false,
         },
       ],
+
+      newTask:'',
     }
   },
 
@@ -34,7 +36,16 @@ createApp({
     rimuoviTask(indice){
       this.taskList.splice(indice,1);
     },
-    
+
+    addTask(){
+      if(this.newTask.length >= 5){
+        this.taskList.unshift({ text: this.newTask, done: false })
+        this.newTask=''
+        
+      }
+
+    },
+
   }
 
 }).mount('#app');
