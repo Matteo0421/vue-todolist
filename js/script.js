@@ -7,6 +7,24 @@ createApp({
   data(){
     return{
 
+      taskList:[
+        {
+          text:'fare la todolist',
+          done:true,
+        },
+        {
+          text:'studiare vue.js',
+          done:true,
+        },
+        {
+          text:'ripetere css',
+          done:false,
+        },
+        {
+          text:'giocare alla playstation',
+          done:false,
+        },
+      ],
     }
   },
 
