@@ -40,7 +40,8 @@
         <li v-for="(task, indice) in taskList"
        :class="{done: task.done===true}" >
           <span>{{task.text}}</span>
-          <i class="fa-solid fa-trash-can"></i>
+          <i @click="rimuoviTask(indice)" 
+           class="fa-solid fa-trash-can"></i>
         </li>
         
       </ul>

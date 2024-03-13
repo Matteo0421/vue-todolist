@@ -31,9 +31,10 @@ createApp({
   // si scrivono tutte le funzioni
   methods:{
 
-    // nomefunzione(){
-    //   corpo funzione
-    // }
+    rimuoviTask(indice){
+      this.taskList.splice(indice,1);
+    },
+    
   }
 
 }).mount('#app');
