@@ -39,7 +39,7 @@
     </div>
 
     <div class="task-container">
-      <ul>
+      <ul v-if="taskList.length >0">
         <li v-for="(task, indice) in taskList"
        :class="{done: task.done===true}" 
        @click="task.done=!task.done">
@@ -51,6 +51,7 @@
         </li>
         
       </ul>
+      <h3 v-else>Non ci sono Task</h3>
 
     </div>
 
