@@ -27,6 +27,7 @@ createApp({
       ],
 
       newTask:'',
+      errorMessage:''
     }
   },
 
@@ -41,7 +42,10 @@ createApp({
       if(this.newTask.length >= 5){
         this.taskList.unshift({ text: this.newTask, done: false })
         this.newTask=''
+        this.errorMessage = ''
         
+      }else{
+        this.errorMessage = 'ERRORE!!! il testo deve essere almeno di 5 caratteri'
       }
 
     },
