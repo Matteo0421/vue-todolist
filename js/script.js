@@ -35,10 +35,15 @@ createApp({
   methods:{
 
     rimuoviTask(indice){
-      this.taskList.splice(indice,1);
+      if(this.taskList[indice].done){
+        this.taskList.splice(indice,1);
+      }else{
+        this.errorMessage = 'ERRORE!!! latask deve essere eseguita per esssere eliminata'
+      }
     },
 
     addTask(){
+      this.errorMessage = ''
       if(this.newTask.length >= 5){
         this.taskList.unshift({ text: this.newTask, done: false })
         this.newTask=''

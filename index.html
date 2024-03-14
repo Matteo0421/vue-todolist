@@ -44,9 +44,8 @@
        :class="{done: task.done===true}" 
        @click="task.done=!task.done">
           <span>{{task.text}}</span>
-          <i
-          v-if="task.done ===true" 
-          @click="rimuoviTask(indice)" 
+          <i 
+          @click.stop="rimuoviTask(indice)" 
            class="fa-solid fa-trash-can"></i>
         </li>
         
